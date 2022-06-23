@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Flask</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url_for('index') }}">Home</a> <!--This is Jinja templating language, which calls the correspondingly named python function in run.py-->
+            </li>
+            <li>
+                <a href="{{ url_for('about') }}">About</a><!--calls the about function in run.py, displaying the about page-->
+            </li>
+            <li>
+                <a href="{{ url_for('contact') }}">Contact</a><!--calls the contact function in run.py, displaying the about page-->
+            </li>
+            <li>
+                <a href="{{ url_for('careers') }}">Careers</a><!--calls the contact function in run.py, displaying the about page-->
+            </li>
+        </ul>
+    </nav>
+
+    {% block content %} <!--content is just a word, and can be replaced with anything. This is useful for inserting multiple templates-->
+    {% endblock %}
+
+</body>
+</html>
