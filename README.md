@@ -27,3 +27,13 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 Install Flask:
 `pip3 install Flask`
+
+Install StartBootstrap Clean Blog theme:
+`wget https://github.com/StartBootstrap/startbootstrap-clean-blog/archive/refs/tags/v5.0.10.zip` 
+Adds a zip file called v5.0.10.zip
+
+Unzip Clean Blog zip file:
+`unzip v5.0.10.zip`
+
+
+
