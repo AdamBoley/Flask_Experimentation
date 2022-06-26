@@ -69,7 +69,15 @@ Check that workspace is connected to heroku:<br>
 
 
 Create requirements.txt file to tell Heroku what language and dependencies are being used: <br>
-pip3 freeze --local > requirements.txt
+`pip3 freeze --local > requirements.txt`
 
+<br>
 
+Push to Heroku:<br>
+`git push -u heroku main`
+
+The app won't work just yet...
+
+Create Procfile:<br>
+`echo web: python run.py > Procfile` (the capital P is important)
 
