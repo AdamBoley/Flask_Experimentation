@@ -42,4 +42,20 @@ To run a developer server:<br>
 `python3 run.py` 
 <br>(python3 -m http.server does not work because there is no index.html in the root directory)
 
+<br>
+
+To install Heroku CLI:<br> 
+`npm install -g heroku`
+
+<br>
+
+To login to Heroku:<br>
+`heroku login -i`
+
+<br>
+
+To view Heroku apps:<br> 
+`heroku apps`
+
+
 
