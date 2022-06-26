@@ -81,3 +81,17 @@ The app won't work just yet...
 Create Procfile:<br>
 `echo web: python run.py > Procfile` (the capital P is important)
 
+Create Config Vars:
+IP: 0.0.0.0 (in run.py as well)
+PORT: 5000 (in run.py as well)
+Add SECRET_KEY from env.py
+
+<br>
+
+If Heroku ever needs to be disconnected:<br>
+`git remote rm heroku`
+
+<br>
+
+Check Heroku logs if deployment fails:<br>
+`heroku logs --tail --app <app-name>`
