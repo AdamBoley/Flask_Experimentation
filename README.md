@@ -57,5 +57,19 @@ To login to Heroku:<br>
 To view Heroku apps:<br> 
 `heroku apps`
 
+<br>
+
+Connect workspace to Heroku:<br>
+`git remote add heroku https://git.heroku.com/mass-effect-flask-app.git`
+
+<br>
+
+Check that workspace is connected to heroku:<br>
+`git remote -v` - should display 2 heroku remotes and 2 origin remotes
+
+
+Create requirements.txt file to tell Heroku what language and dependencies are being used: <br>
+pip3 freeze --local > requirements.txt
+
 
 
