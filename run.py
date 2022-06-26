@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask  # imports Flask class
 from flask import render_template  # imports render_template function
 
@@ -17,18 +18,34 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    data = []  # initialises an empty array
+    with open("data/squad.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template('about.html', page_title='About', squad=data)
     # render_template looks in the templates folder
+    #page_title holds a string, and inserts that string into the double curly braces on each page that contain page_title
+    #This can be used to insert text from the run.py file rather than typing it out in the HTML file
 
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html', page_title='Contact')
+    # render_template looks in the templates folder
+    #page_title holds a string, and inserts that string into the double curly braces on each page that contain page_title
+    #This can be used to insert text from the run.py file rather than typing it out in the HTML file
 
 
 @app.route('/careers')
 def careers():
-    return render_template('careers.html')
+    return render_template('careers.html', page_title='Careers')
+    # render_template looks in the templates folder
+    #page_title holds a string, and inserts that string into the double curly braces on each page that contain page_title
+    #This can be used to insert text from the run.py file rather than typing it out in the HTML file
+
+
+@app.route('/list')
+def list_page():  # ensure this function name is the same as the name inside the url_for in any anchor tags
+    return render_template('list.html', page_title='List', list_of_numbers=[1, 2, 3])
 
 
 if __name__ == '__main__':  # main is the name of the default module in Python

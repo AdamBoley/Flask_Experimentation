@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content%}
+    <h2>{{ page_title }}</h2><!--the page_title argument of the render_template function in run.py will insert About here-->
+
+    {% for number in list_of_numbers %}<!--A standard Python For Loop in HTML, will insert the elements of the list_of_numbers list-->
+        <p>{{ number }} This is a separate paragraph</p><!--number is the singular variable-->
+    {% endfor %}
+
+    
+{% endblock %}

@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Commander Shepard",
+        "description": "Cmdr. Shepard is a highly decorated and very capable Systems Alliance officer. They were born on April 11th, 2154. Early on in their career, Shepard fought in the Skyllian Blitz. Later, Shepard was the first human to join the elite ranks of the Council Spectres.",
+        "image_source": "static/img/shepard-large.webp"
+    },
+    
+    {
+        "name": "Garrus Vakarian",
+        "description": "Garrus Vakarian is a Turian C-SEC officer and former combat engineer. Garrus is also a capable marksman and combat leader.",
+        "image_source": "static/img/garrus-large.webp"
+    },
+
+    {
+        "name": "Tali'Zorah",
+        "description": "Tali'Zorah is a Quarian engineer and technical specialist. ",
+        "image_source": "static/img/tali-large.webp"
+    },
+
+    {
+        "name": "Liara T'Soni",
+        "description": "Liara T'Soni is an Asari scientist, historian, archeologist and biotic. She is an expert on Prothean culture and technology. ",
+        "image_source": "static/img/liara-large.webp"
+    }
+]

@@ -25,15 +25,21 @@ To log into the Heroku toolbelt CLI:
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
 
-Install Flask:
+Install Flask:<br>
 `pip3 install Flask`
+<br>
 
-Install StartBootstrap Clean Blog theme:
-`wget https://github.com/StartBootstrap/startbootstrap-clean-blog/archive/refs/tags/v5.0.10.zip` 
+Install StartBootstrap Clean Blog theme:<br>
+`wget https://github.com/StartBootstrap/startbootstrap-clean-blog/archive/refs/tags/v5.0.10.zip` <br>
 Adds a zip file called v5.0.10.zip
+<br>
 
-Unzip Clean Blog zip file:
+Unzip Clean Blog zip file:<br>
 `unzip v5.0.10.zip`
+<br>
 
+To run a developer server:<br>
+`python3 run.py` 
+<br>(python3 -m http.server does not work because there is no index.html in the root directory)
 
 

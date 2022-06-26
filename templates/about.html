@@ -1,4 +1,53 @@
 {% extends 'base.html' %}
 {% block content%}
-    <h2>About page</h2>
+
+    <!--{{ squad[1]['name'] }} simply injects the value of the name key from the second element of the squad.json file-->
+
+    <h2>{{ page_title }}</h2><!--the page_title argument of the render_template function in run.py will insert About here-->
+
+    <p>
+        Commander Shepard and their squad of assassins, soldiers, engineers, biotics and operatives
+    </p>
+
+    {% for member in squad %}
+
+        <div class="row">
+
+            {% if loop.index % 2 != 0 %}
+
+                <div class="col-md-7">
+                    <h3>{{ loop.index }}. {{ member.name }}</h3> <!--grabs the value of the name key for each instance of the member singular variable. Member is each object of the array in squad.json-->
+                    <p>
+                        {{ member.description }} <!--grabs the value of the description key-->
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive"><!--grabs value of the image_source key-->
+                </div>
+
+            {% else %}
+
+                <div class="col-md-5">
+                    <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive"><!--grabs value of the image_source key-->
+                </div>
+                <div class="col-md-7">
+                    <h3>{{ loop.index }}. {{ member.name }}</h3> <!--grabs the value of the name key for each instance of the member singular variable. Member is each object of the array in squad.json-->
+                    <p>
+                        {{ member.description }} <!--grabs the value of the description key-->
+                    </p>
+                </div>
+                
+
+            {% endif %}
+
+        </div>
+
+        {% if loop.index != loop.length %}
+
+            <hr class="featurette-divider">
+
+        {% endif %}
+
+    {% endfor %}
+
 {% endblock %}
